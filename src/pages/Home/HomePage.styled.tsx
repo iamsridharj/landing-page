@@ -2,14 +2,11 @@ import { forDesktop } from "@botbrews/breakpoints";
 import { HeaderTwo } from "@botbrews/typography";
 import styled from "styled-components";
 
-export const HomepageWrapper = styled.div`
+export const HeroSectionWrapper = styled.div`
     display: flex;
     flex-direction: column;
     flex: 1 1 0;
     width: 100%;
-    background: ${({ theme }) => {
-        return `linear-gradient(-45deg, #8ecae6 0%, #8ecae6 27%, transparent 27%)`;
-    }};
     
     ${forDesktop`
             flex-direction: row;
@@ -34,14 +31,13 @@ export const HeroDescription = styled.div`
 `;
 
 export const Description = styled.div`
-  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
 
   font-family: 'Playfair Display', serif;
   font-weight: 700; 
   font-size: 5rem;
   line-height: 1.2; 
   color: ${({ theme }) => {
-        return theme.colors.raven.raven100
+        return theme.colors.white
     }};
   text-align: center; 
   margin: 0.5em; 
@@ -78,3 +74,26 @@ export const StyledExploreProductsRedirect = styled.div`
 export const ExploreProductsBtnWrapper = styled.div`
     margin: 20px 0px;
 `
+
+export const StyledDivider = styled.div`
+    width: 100%;
+    height: 1px;
+    background: ${({ theme }) => {
+        return theme.colors.raven.raven60
+    }};;
+    margin: 20px 0;
+    position: relative;
+    
+    &::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 3px;
+        width: 50px;
+        background: ${({ theme }) => {
+        return theme.colors.raven.raven60
+    }};;
+    }
+`;

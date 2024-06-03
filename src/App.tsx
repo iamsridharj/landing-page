@@ -20,10 +20,16 @@ const router = createBrowserRouter([
 ]);
 
 const GlobalStyles = createGlobalStyle`
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
+
 html,
 body {
     padding: 0;
     margin: 0;
+    min-height:100vh;
+    background: #0f0c29; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #0f0c29, #302b63, #24243e); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #0f0c29, #302b63, #24243e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 a {

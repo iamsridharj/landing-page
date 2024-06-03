@@ -8,7 +8,10 @@ export const HeaderContainer = styled.header`
   justify-content: space-evenly;
   align-items: center;
   padding: 2rem 2rem;
+  backdrop-filter: blur(50px);
   background-color: transparent;
+  position: fixed;
+    width: 100vw;
 
   @media (max-width: 768px) {
     flex-direction: column;
@@ -18,6 +21,9 @@ export const HeaderContainer = styled.header`
 
 export const Logo = styled(HeaderOne)`
   margin: 0;
+  color: ${({ theme }) => {
+    return theme.colors.white
+  }};
 
   & > span {
     color: ${({ theme }) => {
@@ -53,8 +59,8 @@ export const NavItem = styled(BodyTextBold)`
   a {
     text-decoration: none;
     color: ${({ theme }) => {
-    return theme.colors.raven.raven80
-  }};;
+    return theme.colors.white
+  }};
 
     &:hover {
       text-decoration: underline;
